@@ -4,15 +4,217 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="#CDEEBC44"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#B5D3950E"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <Button
+                android:id="@+id/foto"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:background="#DA28B958"
+                android:onClick="onKnopka"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="ФОТО"
+                android:textColor="#111"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+
+                android:orientation="vertical">
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#DA28B958"
+                    android:onClick="onKnopka"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Павел"
+                    android:textColor="#111"
+                    android:textSize="20sp" />
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#DA28B958"
+                    android:onClick="onKnopka"
+                    android:paddingTop="10dp"
+
+                    android:text="89042767668"
+                    android:textColor="#111"
+                    android:textSize="20sp" />
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DA28B958"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="телефон2">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DA28B958"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="email">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DA28B958"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="email2">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#A391F7B2"
+                android:textSize="30sp"
+                android:text="описание">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#B5D3950E"
+            android:orientation="horizontal"
+            android:layout_margin="10dp">
+
+            <Button
+
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="10dp"
+                android:background="#DA28B958"
+
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="ФОТО"
+                android:textColor="#111"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+
+                android:orientation="vertical">
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#DA28B958"
+
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="имя"
+                    android:textColor="#111"
+                    android:textSize="20sp" />
+
+                <Button
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="#DA28B958"
+
+                    android:paddingTop="10dp"
+
+                    android:text="телефон"
+                    android:textColor="#111"
+                    android:textSize="20sp" />
+
+
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DA28B958"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="телефон2">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DA28B958"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="email">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#DA28B958"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:text="email2">
+
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#A391F7B2"
+                android:textSize="30sp"
+                android:text="описание">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
