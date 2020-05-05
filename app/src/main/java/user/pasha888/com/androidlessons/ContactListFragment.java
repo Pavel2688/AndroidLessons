@@ -1,36 +1,27 @@
 package user.pasha888.com.androidlessons;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.ListFragment;
-import androidx.lifecycle.LifecycleOwner;
-import androidx.lifecycle.LiveData;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import java.util.Objects;
 
 
 public class ContactListFragment extends ListFragment {
 
 
 
-    public static final Kontakt[] kontakt = {
-            new Kontakt("Павел", "89042767668", 1),
-            new Kontakt("Имя", "телефон", 2)
+    public static final Contacts[] contacts = {
+            new Contacts("Павел", "89042767668", 1),
+            new Contacts("Имя", "телефон", 2)
     };
 
 
@@ -39,7 +30,7 @@ public class ContactListFragment extends ListFragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getActivity().setTitle("Список контактов");
-        ArrayAdapter<Kontakt> adapter = new ArrayAdapter<Kontakt>(getContext(), android.R.layout.simple_list_item_1, kontakt){
+        ArrayAdapter<Contacts> adapter = new ArrayAdapter<Contacts>(getContext(), android.R.layout.simple_list_item_1, contacts){
             @NonNull
             @Override
             public View getView(int i, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -49,7 +40,7 @@ public class ContactListFragment extends ListFragment {
 
                 TextView nameView = convertView.findViewById(R.id.tv_name);
                 TextView phoneNumberView = convertView.findViewById(R.id.tv_phoneNumber);
-                Kontakt currentContact = kontakt[i];
+                Contacts currentContact = contacts[i];
                 nameView.setText(currentContact.getName());
                 phoneNumberView.setText(currentContact.getPhoneNumber());
 

@@ -1,11 +1,11 @@
 package user.pasha888.com.androidlessons;
 
-public class Kontakt {
+public class Contacts {
     private final String name;
     private final String phoneNumber;
     private final int image;
 
-    public Kontakt(String name, String phoneNumber, int image) {
+    public Contacts(String name, String phoneNumber, int image) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.image = image;

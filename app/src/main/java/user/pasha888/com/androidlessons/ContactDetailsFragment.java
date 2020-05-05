@@ -1,7 +1,5 @@
 package user.pasha888.com.androidlessons;
 
-import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -26,8 +24,8 @@ public class ContactDetailsFragment extends Fragment {
         int i = this.getArguments().getInt("index");
         TextView detailedContactName = (TextView) view.findViewById(R.id.detailedContactName);
         TextView detailedContactNumber = (TextView) view.findViewById(R.id.detailedContactNumber);
-        detailedContactName.setText(ContactListFragment.kontakt[i].getName());
-        detailedContactNumber.setText(ContactListFragment.kontakt[i].getPhoneNumber());
+        detailedContactName.setText(ContactListFragment.contacts[i].getName());
+        detailedContactNumber.setText(ContactListFragment.contacts[i].getPhoneNumber());
         getActivity().setTitle("Детали контакта");
         return view;
     }

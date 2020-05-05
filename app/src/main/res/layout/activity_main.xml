@@ -8,12 +8,7 @@
 
     >
 
-  <LinearLayout
 
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:orientation="horizontal"
-      android:id="@+id/fragment_list">
 
       <fragment
           android:id="@+id/fragment"
@@ -25,7 +20,7 @@
 
       </fragment>
 
-  </LinearLayout>
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
