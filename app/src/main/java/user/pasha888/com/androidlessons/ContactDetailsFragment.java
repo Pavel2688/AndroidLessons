@@ -11,10 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 public class ContactDetailsFragment extends Fragment {
-
-
 
     @Nullable
     @Override
@@ -29,6 +26,4 @@ public class ContactDetailsFragment extends Fragment {
         getActivity().setTitle("Детали контакта");
         return view;
     }
-
-
 }

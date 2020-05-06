@@ -11,8 +11,6 @@ public class Contacts {
         this.image = image;
     }
 
-
-
     public String getName() {
         return name;
     }
