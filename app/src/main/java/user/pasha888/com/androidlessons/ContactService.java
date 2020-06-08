@@ -4,11 +4,12 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
-import android.util.Log;
 
 import androidx.annotation.Nullable;
 
 import java.lang.ref.WeakReference;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class ContactService extends Service {
     public interface IContactService{
@@ -18,13 +19,12 @@ public class ContactService extends Service {
     private IBinder binder = new LocalService();
     public static final Contacts[] contacts = {
             new Contacts("Павел", "89042767668", "111111111111", "aaaaaaaa",
-                    "bbbbb", "description"),
+                    "bbbbb", "description", new GregorianCalendar(1998, Calendar.JUNE,7)),
             new Contacts("Имя", "телефон", "телефон2", "email",
-                    "email2", "description")
+                    "email2", "description", new GregorianCalendar(1998, Calendar.JUNE,8))
     };
 
-    public ContactService() {
-    }
+
     @Override
     public void onCreate() {
         super.onCreate();
