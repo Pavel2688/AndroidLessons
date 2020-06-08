@@ -24,7 +24,14 @@ implements ContactService.IContactService {
         public void onServiceConnected(ComponentName name, IBinder service) {
             contactService = ((ContactService.LocalService)service).getService();
             isBound = true;
+
+            String details = getIntent().getStringExtra("contactDetail");
+            int id = getIntent().getIntExtra("id",0);
+
             if (firstCreateMainActivity) addFragmentListContact();
+            if (details != null) {
+                addFragmentContactDetail(id);
+            }
         }
         @Override
         public void onServiceDisconnected(ComponentName name) {
@@ -56,6 +63,12 @@ implements ContactService.IContactService {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.content,contactListFragment).commit();
+    }
+    private void addFragmentContactDetail(int id){
+        ContactDetailsFragment contactDetailsFragment = ContactDetailsFragment.newInstance(id);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.content, contactDetailsFragment).addToBackStack(null).commit();
     }
 
     @Override
